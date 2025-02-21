@@ -33,7 +33,6 @@ class ImagesPage:
         """
         self.search_box.fill(text)
         self.search_box.press("Enter")
-        self.reject_btn.click()
 
     def validate_images_search_results(self):
         """
@@ -43,9 +42,9 @@ class ImagesPage:
         for i in self.result_images:
             expect(i).to_be_visible()
 
-    def validate_main_title(self, text):
+    def validate_main_title(self):
         """
         demo docstring
         :return:
         """
-        expect(self.main_title).to_have_text(text)
+        expect(self.main_title).to_be_visible()

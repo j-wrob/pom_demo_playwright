@@ -13,7 +13,7 @@ def test_search(new_page):
     search_page = SearchPage(new_page)
     search_page.navigate()
     search_page.search("Al Bundy")
-    search_page.validate_short_info("Fictional character")
+    search_page.validate_gpt_button()
 
 
 def test_search_logo(new_page):

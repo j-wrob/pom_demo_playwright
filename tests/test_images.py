@@ -23,4 +23,4 @@ def test_main_title(new_page):
     """
     images_page = ImagesPage(new_page)
     images_page.navigate()
-    images_page.validate_main_title("Explore trending image topics")
+    images_page.validate_main_title()

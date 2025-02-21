@@ -1,0 +1,8 @@
+__pycache__/
+logs/
+pages/__pycache__/
+tests/__pycache__/
+tests/logs/
+.pom-demo-pw-venv/
+.idea
+*.pyc

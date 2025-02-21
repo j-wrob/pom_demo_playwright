@@ -17,7 +17,7 @@ class SearchPage:
         self.url = "https://bing.com"
         self.search_box = page.locator("//textarea[@id='sb_form_q']")
         self.logo = page.locator("//*[@aria-label='Welcome to Bing Search']")
-        self.short_info = page.locator("//span[@class='wpt-ovd']")
+        self.gpt_btn = page.locator("//span[@id='b_sh_btn_isprt']")
 
     def navigate(self):
         """
@@ -41,9 +41,10 @@ class SearchPage:
         """
         self.logo.is_visible()
 
-    def validate_short_info(self, text):
+    def validate_gpt_button(self):
         """
         demo docstring
         :return:
         """
-        expect(self.short_info).to_have_text(text)
+        expect(self.gpt_btn).to_be_visible()
+        expect(self.gpt_btn).to_be_enabled()
