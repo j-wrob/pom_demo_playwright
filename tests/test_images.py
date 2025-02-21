@@ -24,3 +24,14 @@ def test_main_title(new_page):
     images_page = ImagesPage(new_page)
     images_page.navigate()
     images_page.validate_main_title()
+
+def test_to_generate_fail(new_page):
+    """
+    demo docstring
+    :param new_page:
+    :return:
+    """
+    images_page = ImagesPage(new_page)
+    images_page.navigate()
+    images_page.validate_main_title()
+    assert False
