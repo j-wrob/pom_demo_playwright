@@ -21,7 +21,7 @@ def new_page(test_name):
     :return:
     """
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, slow_mo=1000)
+        browser = p.chromium.launch(headless=True, slow_mo=1000)
         context = browser.new_context()
         context.tracing.start(
             name=f"{test_name} context",
