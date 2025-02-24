@@ -1,0 +1,22 @@
+image: mcr.microsoft.com/playwright/python:v1.50.0-noble
+
+stages:
+  - test
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python --version
+  - python -m venv venv
+  - source venv/bin/activate
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+  - python -m playwright install --with-deps
+
+pytest:
+  stage: test
+  script:
+    - pytest --tracing=on -s
