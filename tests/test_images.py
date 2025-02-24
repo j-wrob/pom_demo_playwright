@@ -17,7 +17,7 @@ def test_search_images(new_page):
 
 def test_main_title(new_page):
     """
-    demo docstring
+    demo docstring.
     :param new_page:
     :return:
     """
